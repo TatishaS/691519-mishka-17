@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Таня Сидорова](https://up.htmlacademy.ru/adaptive/17/user/691519).
-* Наставник: `Неизвестно`.
+* Наставник: `Keks Кот`.
 
 ---
 
