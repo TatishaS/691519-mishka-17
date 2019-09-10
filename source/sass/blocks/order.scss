@@ -1,0 +1,10 @@
+.order__text {
+  @include font-set(13px, 24px, 400);
+
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.order__form {
+  margin-bottom: 55px;
+}

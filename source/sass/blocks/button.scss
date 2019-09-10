@@ -1,0 +1,19 @@
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include font-set(17px, 20px, 700);
+
+  background-color: transparent;
+  color: $compliment-color--base;
+  border: $border;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}

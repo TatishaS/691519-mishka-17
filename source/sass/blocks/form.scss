@@ -1,0 +1,31 @@
+.form__fieldset {
+  border: 0;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.form__title {
+  @include font-set(17px, 16px);
+  color: $main-color--base;
+
+  margin: 0;
+  margin-bottom: 25px;
+
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.form__list {
+  @include list-reset;
+
+  @include font-set(17px, 18px);
+  color: $black;
+}
+
+.form__notes {
+  @include font-set(14px, 16px, 400);
+
+  margin-bottom: 30px;
+}

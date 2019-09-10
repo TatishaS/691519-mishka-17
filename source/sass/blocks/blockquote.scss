@@ -1,0 +1,25 @@
+.blockquote {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.blockquote__text {
+  @include font-set(15px, 30px, 400);
+
+  margin: 0;
+  margin-bottom: 65px;
+}
+
+.blockquote__author {
+  font-style: normal;
+}
+
+.blockquote__name {
+  color: $black;
+  margin-bottom: 10px;
+}
+
+.blockquote__nickname {
+  @include font-set(17px, 30px, 400);
+}

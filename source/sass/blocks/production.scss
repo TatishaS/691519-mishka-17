@@ -1,0 +1,39 @@
+.production {
+  margin-bottom: 59px;
+}
+
+.production__border {
+  outline: 1px solid $compliment-color--lighten;
+}
+
+.production__title {
+  @include font-set(17px, 24px);
+
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 63px;
+
+  color: $black;
+  text-align: left;
+}
+
+.production__video {
+  margin-bottom: 30px;
+}
+
+.production__info {
+  margin-bottom: 30px;
+}
+
+.production__text {
+  @include font-set(13px, 24px, 400);
+
+  margin: 0;
+  margin-bottom: 25px;
+
+  padding: 0;
+}
+
+.production__order-button {
+  margin-bottom: 30px;
+}

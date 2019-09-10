@@ -1,0 +1,42 @@
+.contacts__title {
+  @include font-set(18px, 30px);
+
+  color: $black;
+  margin: 0;
+  margin-bottom: 39px;
+}
+
+.contacts__list {
+  @include list-reset;
+
+  //margin-bottom: 40px;
+}
+
+.contacts__email,
+.contacts__address {
+  @include font-set(15px, 30px, 400);
+
+  display: flex;
+  margin-bottom: 39px;
+}
+
+.contacts__type,
+.contacts__info {
+  display: block;
+
+  margin: 0;
+}
+
+.contacts__type {
+  padding-right: 28px;
+}
+
+.contacts__map {
+  margin-bottom: 39px;
+}
+
+.contacts__button {
+  //@include align-center;
+
+  margin-bottom: 39px;
+}

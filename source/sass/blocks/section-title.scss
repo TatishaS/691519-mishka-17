@@ -1,0 +1,6 @@
+.section-title {
+  @include font-set(25px, 30px);
+  color: $black;
+
+  margin: 0;
+}

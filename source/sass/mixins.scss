@@ -1,0 +1,24 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin font-set($size: 17px, $line-height: 24px, $weight:null) {
+  font-size: $size;
+  line-height: floor($line-height / $size * 100) / 100;
+  font-weight: $weight;
+}
+
+@mixin align-center {
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+}

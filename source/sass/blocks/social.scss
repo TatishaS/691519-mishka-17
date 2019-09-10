@@ -1,0 +1,24 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include list-reset;
+
+  width: 146px;
+  margin: 25px auto;
+}
+
+.social__item {
+  margin-bottom: 10px;
+
+  /*Временно для сетки*/
+  width: 28px;
+  height: 28px;
+
+  background-color: $black;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 25px;
+  }
+}

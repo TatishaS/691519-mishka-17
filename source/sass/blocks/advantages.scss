@@ -1,0 +1,22 @@
+.advantages {
+  margin-bottom: 25px;
+}
+
+.advantages__list {
+  @include list-reset;
+  @include font-set(17px, 20px);
+  color: $black;
+}
+
+.advantages__title {
+  margin-bottom: 25px;
+}
+
+.advantages__item {
+  padding-top: 55px;
+  margin-bottom: 30px;
+
+  &--present {
+    margin-bottom: 55px;
+  }
+}

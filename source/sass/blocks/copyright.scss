@@ -1,0 +1,13 @@
+.copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 184px;
+  margin: 23px auto;
+
+  @include font-set(19px, 18px);
+
+  text-decoration: none;
+  color: $black;
+}

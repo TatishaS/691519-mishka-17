@@ -1,0 +1,43 @@
+.product {
+  margin-bottom: 30px;
+
+  outline: 1px solid $compliment-color--lighten;
+}
+
+.product__photo {
+  width: 260px;
+  height: 195px;
+}
+
+.product__info {
+  padding: 27px;
+
+  text-align: left;
+}
+
+.product__description {
+  border-bottom: 1px solid $compliment-color--lighten;
+
+  margin-bottom: 27px;
+}
+
+.product__title {
+  color: $black;
+  font: inherit;
+
+  margin: 0;
+}
+
+.product__title-link {
+  text-decoration: none;
+}
+
+.product__parameters {
+  @include font-set(13px, 30px, 400);
+}
+
+.product__price {
+  @include font-set(15px, 24px);
+
+  color: $black;
+}

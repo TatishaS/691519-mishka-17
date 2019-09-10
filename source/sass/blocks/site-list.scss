@@ -1,0 +1,52 @@
+.site-list {
+  width: 100%;
+
+  @include list-reset;
+  @include font-set(17px, 24px, 700);
+
+  color: $black;
+}
+
+.site-list__item {
+  width: 100%;
+
+  &--new,
+  &--sale {
+    display: none;
+  }
+}
+
+.site-list__logo {
+  display: block;
+
+  padding-left: 116px;
+  padding-right: 118px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  background-color: $white;
+  border-bottom: 1px solid $compliment-color--lighten;
+}
+
+.site-list__logo-image {
+  width: 86px;
+  height: 35px;
+}
+
+.site-list__link {
+  display: block;
+  padding-left: 76px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  color: $black;
+  text-decoration: none;
+
+  background-color: $white;
+  border-bottom: 1px solid $compliment-color--lighten;
+
+  &--search,
+  &--cart {
+    position: relative;
+  }
+}

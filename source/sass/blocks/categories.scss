@@ -1,0 +1,37 @@
+.categories {
+  /*display: block;*/
+  background-color: $bg-color--light;
+  margin-bottom: 30px;
+}
+
+.categories__list {
+  @include list-reset;
+}
+
+.categories__item {
+  width: 100%;
+
+  &--interior {
+    background-color: $main-color--base;
+  }
+
+  &--toy {
+    background-color: $main-color--dark;
+  }
+}
+
+.categories__link {
+  display: block;
+
+  padding-left: 30px;
+  padding-right: 160px;
+  padding-top: 29px;
+  padding-bottom: 29px;
+
+  @include font-set(19px, 24px);
+
+  color: $white;
+  text-decoration: none;
+
+  text-align: left;
+}

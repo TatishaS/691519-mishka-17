@@ -1,0 +1,28 @@
+.reviews {
+  margin-bottom: 40px;
+}
+
+.reviews__title {
+  margin-bottom: 30px;
+}
+
+.reviews__items {
+  margin-bottom: 40px;
+}
+
+.reviews__arrow {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+
+  background-color: transparent;
+  border: 0;
+  outline: 1px solid $compliment-color--lighten;
+
+  margin: 0;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 37px;
+  padding-right: 42px;
+}
