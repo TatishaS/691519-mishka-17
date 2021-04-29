@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "fonts";
-@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "normalize";
 @import "scaffolding";
 @import "blocks/section-title";
 @import "blocks/button";
@@ -19,7 +19,10 @@
 @import "blocks/contacts";
 @import "blocks/order";
 @import "blocks/form";
+@import "blocks/list-radio";
+@import "blocks/list-checkbox";
 @import "blocks/list-fields";
+@import "blocks/single-field";
 @import "blocks/textarea";
 @import "blocks/catalog";
 @import "blocks/product";
@@ -29,3 +32,4 @@
 @import "blocks/social";
 @import "blocks/copyright";
 @import "blocks/cart-modal";
+@import "blocks/modal-overlay";

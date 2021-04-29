@@ -53,11 +53,14 @@
   width: 162px;
 }
 
+.bestseller__image-wrapper {
+  margin-bottom: 27px;
+}
+
 .bestseller__image {
+  display: block;
   width: 260px;
   height: 315px;
-
-  margin-bottom: 27px;
 }
 
 .bestseller__footer {
@@ -70,4 +73,129 @@
 
   margin: 0;
   margin-bottom: 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .bestseller {
+    position: relative;
+
+    padding-bottom: 70px;
+    margin-bottom: 50px;
+  }
+
+  .bestseller__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 47px;
+  }
+
+  .bestseller__title {
+    margin-bottom: 0;
+  }
+
+  .bestseller__status {
+    width: 100px;
+    padding-right: 22px;
+
+    text-align: center;
+    margin: auto 0;
+
+    @include font-set(17px, 17px);
+  }
+
+  .bestseller__info {
+    width: 50%;
+
+    text-align: left;
+
+    padding-right: 42px;
+    margin-bottom: 55px;
+  }
+
+  .bestseller__description {
+    @include font-set(17px, 30px, 400);
+
+    margin-bottom: 30px;
+  }
+
+  .bestseller__image-wrapper {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+
+    margin-bottom: 0;
+  }
+
+
+  .bestseller__image {
+    width: 333px;
+    height: 404px;
+  }
+
+  .bestseller__footer {
+    width: 292px;
+
+    padding-bottom: 0;
+  }
+
+  .bestseller__price {
+    @include font-set(20px, 24px);
+
+    text-align: center;
+
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bestseller {
+    position: static;
+
+    padding-bottom: 96px;
+    margin-bottom: 65px;
+  }
+
+  .bestseller__wrapper {
+    position: relative;
+  }
+
+  .bestseller__header {
+    position: relative;
+    justify-content: flex-start;
+    z-index: 10;
+  }
+
+  .bestseller__status {
+    order: -1;
+
+    width: 170px;
+    padding-left: 44px;
+    padding-right: 50px;
+  }
+
+  .bestseller__info {
+    padding-left: 175px;
+    padding-right: 58px;
+
+    margin-bottom: 105px;
+  }
+
+  .bestseller__description {
+    margin-bottom: 45px;
+  }
+
+  .bestseller__image-wrapper {
+    top: -60px;
+  }
+
+  .bestseller__image {
+    width: 525px;
+    height: 636px;
+  }
+
+  .bestseller__footer {
+    margin-left: 175px;
+  }
 }

@@ -1,0 +1,94 @@
+.zigzag {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    display: none;
+  }
+
+  &--line {
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+      width: 100%;
+      height: 6px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-position: top center;
+      background-repeat: repeat-x;
+      background-size: contain;
+
+      z-index: 100;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .zigzag {
+
+    &::before {
+      display: block;
+
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+
+      content: "";
+      width: 100%;
+      height: 24px;
+      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      z-index: 100;
+    }
+
+
+    &--line {
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        bottom: -70px;
+        left: 0;
+
+        height: 16px;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .zigzag {
+
+    &::before {
+      height: 34px;
+      bottom: -18px;
+    }
+
+    &--line {
+
+      &::after {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 50px;
+
+        bottom: -96px;
+        left: 0;
+
+        height: 23px;
+        background-repeat: repeat-x;
+        background-clip: content-box;
+        background-size: 100% 100%; //как сделать размер зигзага адаптивным?
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

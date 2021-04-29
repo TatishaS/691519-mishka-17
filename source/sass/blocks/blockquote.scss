@@ -23,3 +23,33 @@
 .blockquote__nickname {
   @include font-set(17px, 30px, 400);
 }
+
+@media (min-width: $tablet-width) {
+  .blockquote {
+    margin-bottom: 0;
+  }
+
+  .blockquote__text {
+    @include font-set(17px, 30px, 400);
+  }
+
+  .blockquote__author {
+    width: 50%;
+  }
+
+  .blockquote__name {
+    @include font-set(18px, 24px, 700);
+    display: block;
+    text-align: left;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .blockquote__name {
+    @include font-set(17px, 24px, 700);
+  }
+
+  .blockquote__text {
+    margin-bottom: 45px;
+  }
+}

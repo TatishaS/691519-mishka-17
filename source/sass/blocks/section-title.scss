@@ -3,4 +3,12 @@
   color: $black;
 
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font-set(43px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-set(53px, 57px);
+  }
 }

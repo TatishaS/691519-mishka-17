@@ -1,0 +1,77 @@
+.single-field {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.single-field__input {
+  width: 100%;
+  @include font-set(19px, 18px, 400);
+  background-color: transparent;
+  padding: 0;
+  padding-bottom: 15px;
+
+  border: 0;
+  border-bottom: 2px solid $black;
+
+  &::placeholder {
+    border: 0;
+    opacity: 0.3;
+  }
+
+  &--mail {
+    &::placeholder {
+      @include font-set(17px, 18px, 400);
+    }
+  }
+}
+
+.single-field__icon {
+  position: absolute;
+  bottom: 16px;
+  right: 8px;
+
+  opacity: 0.2;
+
+  path {
+    fill: #231f20;
+  }
+
+  &--phone {
+    width: 25px;
+    height: 24px;
+  }
+
+  &--email {
+    width: 32px;
+    height: 32px;
+
+    bottom: 13px;
+    right: 4px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .single-field {
+    width: 75%;
+  }
+
+  .single-field__input {
+    &--mail {
+      &::placeholder {
+        @include font-set(19px, 18px, 400);
+      }
+    }
+  }
+
+  .single-field__icon {
+    right: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .single-field {
+    width: 66.7%;
+  }
+}

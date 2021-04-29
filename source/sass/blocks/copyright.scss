@@ -11,3 +11,34 @@
   text-decoration: none;
   color: $black;
 }
+
+.copyright__logo {
+  path {
+  fill: $main-color--base;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__link {
+    &:active {
+        color: $black;
+        opacity: 0.3;
+      }
+    }
+
+    &:hover path,
+    &:focus path {
+        fill: $main-color--darken;
+        opacity: 1;
+    }
+
+    &:active path {
+      opacity: 0.3;
+    }
+  }

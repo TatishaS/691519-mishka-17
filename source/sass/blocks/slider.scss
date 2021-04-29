@@ -1,3 +1,61 @@
 .slider__controls {
   display: flex;
 }
+
+.slider__button {
+  width: 50%;
+  display: block;
+  text-align: center;
+  min-height: 52px;
+
+  border: 0;
+  outline: 1px solid $compliment-color--lighten;
+
+  margin: 0;
+
+  &--left {
+    background: url("../../img/icon-left-arrow.svg") center center no-repeat;
+  }
+
+  &--right {
+    background: url("../../img/icon-right-arrow.svg") center center no-repeat;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    width: 100%;
+  }
+
+  .slider__controls {
+    width: 25%;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+  }
+
+  .slider__button {
+    outline: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__controls {
+    width: 17%;
+  }
+
+  .slider__button {
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

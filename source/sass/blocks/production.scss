@@ -3,15 +3,34 @@
 }
 
 .production__border {
+  padding-top: 25px;
+  padding-bottom: 30px;
   outline: 1px solid $compliment-color--lighten;
+}
+
+.production__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+.production__icon {
+  margin-left: 34px;
+
+  width: 32px;
+  height: 32px;
+
+  path {
+    fill: $main-color--base;
+  }
 }
 
 .production__title {
   @include font-set(17px, 24px);
 
   margin: 0;
-  margin-bottom: 20px;
-  padding-left: 63px;
+  margin-left: 25px;
 
   color: $black;
   text-align: left;
@@ -22,7 +41,8 @@
 }
 
 .production__info {
-  margin-bottom: 30px;
+  margin-left: 34px;
+  margin-right: 34px;
 }
 
 .production__text {
@@ -31,9 +51,114 @@
   margin: 0;
   margin-bottom: 25px;
 
+  text-align: left;
+
   padding: 0;
 }
 
 .production__order-button {
-  margin-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .production {
+    margin-bottom: 65px;
+  }
+
+  .production__border {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  .production__header {
+    order: 1;
+  }
+
+  .production__icon {
+    margin-left: 42px;
+  }
+
+  .production__title {
+    @include font-set(20px, 24px);
+  }
+
+  .production__info {
+    order: 2;
+
+    margin-left: 42px;
+    margin-right: 42px;
+  }
+
+  .production__text {
+    @include font-set(15px, 24px, 400);
+
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .production {
+    margin-bottom: 104px;
+  }
+
+  .production__wrapper {
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+
+      transition: 0.2s;
+    }
+
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .production__border {
+    position: relative;
+
+    padding-top: 40px;
+    padding-left: 680px;
+    padding-bottom: 60px;
+  }
+
+  .production__header {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-left: 80px;
+    margin-right: 58px;
+    margin-bottom: 35px;
+  }
+
+  .production__icon {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .production__title {
+    margin: 0;
+  }
+
+  .production__info {
+    margin-left: 80px;
+    margin-right: 58px;
+  }
+
+  .production__text {
+    @include font-set(15px, 30px, 400);
+    margin-bottom: 50px;
+  }
+
+
+
+
+
+
 }

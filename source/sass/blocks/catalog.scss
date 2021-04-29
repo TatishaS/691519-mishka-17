@@ -2,3 +2,32 @@
   @include list-reset;
   @include align-center;
 }
+
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .catalog__item {
+
+    transition: all 0.5s ease;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+        outline: none;
+      }
+
+      &:active {
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: 50px;
+      }
+    }
+}

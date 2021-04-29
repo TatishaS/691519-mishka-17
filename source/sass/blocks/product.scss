@@ -5,6 +5,8 @@
 }
 
 .product__photo {
+  display: block;
+
   width: 260px;
   height: 195px;
 }
@@ -16,9 +18,11 @@
 }
 
 .product__description {
-  border-bottom: 1px solid $compliment-color--lighten;
+  margin-bottom: 25px;
+}
 
-  margin-bottom: 27px;
+.product__title-link {
+  text-decoration: none;
 }
 
 .product__title {
@@ -28,16 +32,125 @@
   margin: 0;
 }
 
-.product__title-link {
-  text-decoration: none;
-}
-
 .product__parameters {
   @include font-set(13px, 30px, 400);
+
+  padding: 0;
+  margin: 0;
+}
+
+.product__footer {
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid $compliment-color--lighten;
+  padding-top: 25px;
+}
+
+.product__button {
+  position: relative;
 }
 
 .product__price {
   @include font-set(15px, 24px);
 
   color: $black;
+}
+
+.product__cart-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  opacity: 0.2;
+
+  path {
+    fill: #231f20;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    display: flex;
+
+    margin-bottom: 55px;
+  }
+
+  .product__photo {
+    width: 334px;
+    height: 334px;
+  }
+
+  .product__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+
+    width: 50%;
+  }
+
+  .product__title {
+    @include font-set(20px, 24px);
+  }
+
+  .product__parameters {
+    @include font-set(15px, 30px);
+  }
+
+  .product__price {
+    @include font-set(17px, 24px);
+  }
+}
+
+@media (min-width: $desktop-width)  {
+  .product {
+    max-width: 315px;
+    flex-direction: column;
+  }
+
+  .product__photo {
+    width: 315px;
+    height: 464px;
+  }
+
+  .product__info {
+    display: block;
+
+    width: 100%;
+  }
+
+  .product__title-link {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .product__button {
+    cursor: pointer;
+
+    &:hover .product__cart-icon {
+      opacity: 1;
+
+      path {
+        fill: $main-color--base;
+      }
+    }
+
+    &:active .product__cart-icon {
+      opacity: 0.3;
+
+      path: {
+        fill: $main-color--base;
+      }
+    }
+  }
+
 }

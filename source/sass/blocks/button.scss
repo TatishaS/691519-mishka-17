@@ -17,3 +17,20 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
+@media (min-width: $desktop-width) {
+  .button {
+    transition: all 0.5s;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $compliment-color--base;
+      color: $white;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

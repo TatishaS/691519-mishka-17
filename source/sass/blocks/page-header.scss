@@ -5,3 +5,19 @@
     margin-bottom: 30px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    &--inner {
+      margin-bottom: 82px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    &--inner {
+      margin-bottom: 130px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.list-checkbox {
+  @include list-reset;
+}
+
+.list-checkbox__option {
+  padding-left: 64px;
+  padding-top: 15px;
+
+  margin-bottom: 35px;
+}
+
+.list-checkbox__input {
+  display: none;
+}
+
+.list-checkbox__label {
+  position: relative;
+  display: block;
+}
+
+.list-checkbox__input + label {
+
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    top: -50%;
+    left: -64px;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid $compliment-color--base;
+
+    background-color: transparent;
+  }
+}
+
+.list-checkbox__input:checked + label {
+
+  &::after {
+    position: absolute;
+
+    content: "";
+
+    top: 2px;
+    left: -55px;
+
+    width: 23px;
+    height: 17px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .list-checkbox__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 501px;
+  }
+  .list-checkbox__option {
+    width: 50%;
+    padding-left: 82px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .list-checkbox {
+    @include font-set(19px, 18px, 700);
+
+    width: 83.3%;
+    margin: 0;
+  }
+
+  .list-checkbox__container {
+    width: 100%;
+    justify-content: flex-start;
+
+  }
+
+  .list-checkbox__option {
+    width: 30%;
+
+  }
+
+  .list-checkbox__label {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .list-checkbox__input:hover + label,
+  .list-checkbox__input:focus + label {
+    transition: all 0.5s ease;
+
+    &::before {
+      border-color: $main-color--bright;
+    }
+  }
+
+  .list-checkbox__input:active + label {
+    transition: all 0.5s ease;
+
+    &::before {
+      border-color: $black;
+      opacity: 0.3;
+    }
+  }
+}

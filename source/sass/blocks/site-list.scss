@@ -9,6 +9,7 @@
 
 .site-list__item {
   width: 100%;
+  border-bottom: 1px solid $compliment-color--lighten;
 
   &--new,
   &--sale {
@@ -25,12 +26,12 @@
   padding-bottom: 22px;
 
   background-color: $white;
-  border-bottom: 1px solid $compliment-color--lighten;
 }
 
 .site-list__logo-image {
+  display: block;
   width: 86px;
-  height: 35px;
+  height: auto;
 }
 
 .site-list__link {
@@ -43,10 +44,239 @@
   text-decoration: none;
 
   background-color: $white;
-  border-bottom: 1px solid $compliment-color--lighten;
 
   &--search,
   &--cart {
     position: relative;
+  }
+}
+
+.site-list__search-icon,
+.site-list__cart-icon {
+  position: absolute;
+  top: 33px;
+  left: 31px;
+
+  opacity: 0.2;
+  fill: #231f20;
+}
+
+.site-list__search-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.site-list__cart-icon {
+  width: 20px;
+  height: 19px;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include align-center;
+  }
+
+  .site-list__item {
+    border: none;
+
+    &--logo {
+      width: 320px;
+      height: 89px;
+
+      border-right: 1px solid $compliment-color--lighten;
+    }
+
+    &--catalog,
+    &--order {
+      width: 167px;
+
+      @include font-set (15px, 24px);
+
+      background-color: transparent;
+      text-align: left;
+    }
+
+    &--catalog {
+      order: 3;
+    }
+
+    &--order {
+      order: 4;
+    }
+
+    &--search {
+      order: 1;
+
+      width: 83px;
+      padding: 0;
+
+      font-size: 0;
+      text-align: center;
+
+      border-right: 1px solid $compliment-color--lighten;
+    }
+
+    &--cart {
+      order: 2;
+
+      width: 265px;
+      text-align: right;
+    }
+  }
+
+  .site-list__logo {
+    padding: 0;
+    padding-right: 208px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+  }
+
+  .site-list__logo-image {
+    width: 112px;
+  }
+
+  .site-list__link {
+    padding: 0;
+
+    &--catalog,
+    &--order {
+      padding-right: 27px;
+      padding-top: 18px;
+      background-color: transparent;
+    }
+
+    &--cart {
+      padding-left: 75px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__item {
+    &--logo {
+      order: 3;
+      width: 315px;
+    }
+
+    &--catalog {
+      order: 1;
+      width: 185px;
+
+      @include font-set(17px, 24px);
+
+      border-right: 1px solid $compliment-color--lighten;
+    }
+
+    &--order {
+      order: 2;
+      width: 200px;
+
+      @include font-set(17px, 24px);
+    }
+
+    &--search {
+      order: 4;
+      width: 85px;
+    }
+
+    &--cart {
+      order: 5;
+      width: 265px;
+    }
+
+    &--new,
+    &--sale {
+      display: block;
+
+      width: 215px;
+      text-align: left;
+
+      @include font-set(15px, 24px);
+    }
+
+    &--new {
+      order: 6;
+    }
+
+    &--sale {
+      order: 7;
+    }
+  }
+
+  .site-list__logo {
+    padding-left: 65px;
+    padding-right: 90px;
+    padding-top: 9px;
+    padding-bottom: 7px;
+  }
+
+  .site-list__logo-image {
+    width: 149px;
+  }
+
+  .site-list__link {
+    cursor: pointer;
+
+    &--catalog {
+      padding-right: 35px;
+      padding-top: 32px;
+      padding-bottom: 31px;
+    }
+
+    &--order {
+      padding-left: 35px;
+      padding-right: 0;
+      padding-top: 32px;
+      padding-bottom: 31px;
+    }
+
+    &--search {
+      &:hover .site-list__search-icon {
+        opacity: 1;
+        fill: $main-color--base;
+      }
+
+      &:active .site-list__search-icon {
+        opacity: 0.3;
+        fill: $main-color--base;
+      }
+    }
+
+    &--cart {
+      padding-left: 83px;
+
+      &:hover .site-list__cart-icon {
+        opacity: 1;
+        fill: $main-color--base;
+      }
+
+      &:active .site-list__cart-icon {
+        opacity: 0.3;
+        fill: $main-color--base;
+      }
+    }
+
+    &--new,
+    &--sale {
+    padding-top: 18px;
+
+    background-color: transparent;
+    }
+
+
+    &:hover {
+      color: $black;
+      opacity: 0.6;
+    }
+
+    &:active {
+      color: $black;
+      opacity: 0.3;
+    }
   }
 }

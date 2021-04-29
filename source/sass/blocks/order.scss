@@ -8,3 +8,22 @@
 .order__form {
   margin-bottom: 55px;
 }
+
+@media (min-width: $desktop-width) {
+  .order__text {
+  @include font-set(17px, 30px);
+
+  margin-bottom: 55px;
+  }
+
+  .order__form {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order__header-wrapper {
+    padding-left: 19.5%;
+    padding-right: 19.5%;
+  }
+}
